@@ -13,7 +13,7 @@ namespace PartyInvites.Controllers
         public ViewResult Index() //RedirectResult, HttpUnauthorizedResult,
         {
             int hour = DateTime.Now.Hour;
-            ViewBag.Start = "Start";
+            ViewBag.Start = "Start"; 
             ViewBag.Hello = hour < 12 ? "Good morning" : "Good Afternoon";
 
             return View();
@@ -27,8 +27,16 @@ namespace PartyInvites.Controllers
         [HttpPost]
         public ViewResult RsvpForm(GuestResponse guestResponse)
         {
-            // TODO: Email response to the party organizer
-            return View("Thanks", guestResponse);
+            if (ModelState.IsValid)
+            {
+                // TODO: Email response to the party organizer
+                return View("Thanks", guestResponse);
+            }
+            else
+            {
+                // there is a validation error
+                return View();
+            }
         }
     }
 }
