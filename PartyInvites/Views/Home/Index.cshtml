@@ -1,31 +1,23 @@
-﻿
+﻿@model PartyInvites.Models.MyProduct
+
 @{
-    Layout = null;
+    ViewBag.Title = "Guest Information";
 }
 
-<!DOCTYPE html>
+Product: @Model.Name
+<br/>
+<div class="btn btn-default">
+    @Html.ActionLink("NameAndPrice", "NameAndPrice")
+</div>
+<br/>
+<div class="btn btn-default">
+    @Html.ActionLink("DemoExpressions", "DemoExpressions")
+</div>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
-    <title>Index</title>
-    <style>
-        .btn a { color: white; text-decoration: none}
-        body { background-color: #F1F1F1; }
-    </style>
-</head>
-<body>
-    <div class="text-center">
-        @ViewBag.Hello, Serii from the view
-        <p>
-            We're going to have an exciting party.<br />
-            (To do: sell it better. Add pictures or something.)
-        </p>
-        <div class="btn btn-success">
-        @Html.ActionLink("RSVP Now", "RsvpForm")
-         </div>
-    </div>
-</body>
-</html>
+<div class="btn btn-default">
+    @Html.ActionLink("DemoArray", "DemoArray")
+</div>
+
+
+
+

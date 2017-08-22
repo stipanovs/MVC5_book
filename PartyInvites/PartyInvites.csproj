@@ -117,15 +117,22 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\GuestResponse.cs" />
+    <Compile Include="Models\MyProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index3.cshtml" />
     <Content Include="Views\Home\RsvpForm.cshtml" />
     <Content Include="Views\Home\Thanks.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Views\_BasicLayout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\NameAndPrice.cshtml" />
+    <Content Include="Views\Home\DemoExpressions.cshtml" />
+    <Content Include="Views\Home\DemoArray.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
